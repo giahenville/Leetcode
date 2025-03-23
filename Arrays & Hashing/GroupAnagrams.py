@@ -12,7 +12,8 @@ def groupAnagrams(strs: List[str]) -> List[List[str]]:
     for str in strs:
         word = [0] * 26
         for char in str:
-            charIndex = ord(char) - 97 # a = 0, b = 1, c = 2, etc...
+            charIndex = ord(char.lower()) - 97 # a = 0, b = 1, c = 2, etc...
+        
             word[charIndex] += 1
         word = tuple(word)
         if word in combinationsMap:
@@ -27,4 +28,5 @@ def groupAnagrams(strs: List[str]) -> List[List[str]]:
 
 
 
+print(groupAnagrams(["Eat","tea","tan","ate","nat","bat"])) #[["bat"],["nat","tan"],["ate","Eat","tea"]]
 print(groupAnagrams(["eat","tea","tan","ate","nat","bat"])) #[["bat"],["nat","tan"],["ate","eat","tea"]]
