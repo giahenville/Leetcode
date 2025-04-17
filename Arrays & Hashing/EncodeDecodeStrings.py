@@ -24,7 +24,7 @@ class EncodeDecode:
             # create word
             numOfChars = int(numOfChars)
             word = encodedStr[i: i + numOfChars]
-            
+
             # add word to list
             i += numOfChars
             result.append(word)
@@ -37,5 +37,5 @@ encodeDecodeStr = EncodeDecode()
 encoded = encodeDecodeStr.encode(list1)
 decoded = encodeDecodeStr.decode(encoded)
 
-print("Encoded str: ", encoded) # returns encoded string
-print("Decoded string: ", decoded) # returns decoded string
+print("Encoded str: ", encoded) # " Encoded str:  4#neet4#code4#love3#you "
+print("Decoded string: ", decoded) # " ['neet', 'code', 'love', 'you'] "
